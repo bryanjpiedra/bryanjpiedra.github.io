@@ -16,6 +16,6 @@ button.addEventListener('click', function() {
     // Check if the click count is 5
     if (clickCount === 6) {
         // Redirect to another webpage after the fifth click
-        window.location.href = 'EstherVideo.html'; // Replace 'your-destination-page.html' with the actual URL
+        window.location.href = 'index.html'; // Replace 'your-destination-page.html' with the actual URL
     }
 });
