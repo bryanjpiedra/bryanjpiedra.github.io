@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Your+Handwritten+Font&display=swap');
+
+
+body {
+    background: pink;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    text-decoration: underline;
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Set font family for paragraphs */
+p {
+    font-family: 'Arial', sans-serif; /* Adjust font family as needed */
+}
+
+/* Adjust spacing between cards in the flex container */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%; /* Adjust margin relative to the viewport height */
+    position: relative;
+}
+
+/* Adjust image size */
+.flex-container img {
+    width: 100%; /* Use 100% width to fill the container */
+    height: 100%; /* Auto height to maintain aspect ratio */
+    border-radius: 15px;
+    border: 4px solid black;
+}
+
+.card {
+    perspective: 1000px;
+    width: 30%; /* Adjust the width relative to the viewport width */
+    height: auto; /* Auto height to maintain aspect ratio */
+    cursor: pointer; /* Add pointer cursor to indicate clickability */
+    max-width: 330px; /* Set maximum width to maintain card size */
+    position: relative; /* Establish positioning context */
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card.flip .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    box-sizing: border-box; /* Ensure border size is included in element size */
+}
+
+.card-back {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+}
+
+.card-back p {
+    font-family: 'Your Handwritten Font', cursive;
+    padding: 15px;
+
+}
+
+.back-content {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    color: rgb(66, 66, 66);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.button:active {
+    color: rgb(66, 66, 66);
+    background-color: white;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
